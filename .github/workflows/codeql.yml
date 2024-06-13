@@ -1,0 +1,13 @@
+name: CodeQL SAST Scan
+on:
+  workflow_dispatch:
+  push:
+     branches:[main]
+  pull_request:
+     branches:[codeql]
+     jobs:
+       run_scan:
+       name:'SAST Scan'
+       user:shallscript/.github/workflow/codeql.yml@main
+       
+  
